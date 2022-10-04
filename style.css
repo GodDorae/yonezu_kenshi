@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 1rem;
+    height: 5000px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1rem);
+    z-index: 100;
+}
+
+.header_container {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_component::after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    transition: all .2s ease-in-out;
+}
+
+.header_component:hover::after {
+    width: 100%;
+}
+
+.main_title {
+    width: 100%;
+    padding: 15rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main_title_jpn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.main_title_jpn_elem {
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        filter: blur(1rem);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.jpn_1 {
+    animation-delay: 0;
+}
+
+.jpn_2 {
+    animation-delay: 0.5s;
+}
+
+.jpn_3 {
+    animation-delay: 1s;
+}
+
+.jpn_4 {
+    animation-delay: 1.5s;
+}
+
+.main_title_en {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+@keyframes show_en {
+    from {
+        opacity: 0;
+        filter: blur(1rem);
+        transform: translateX(-2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main_title_en_elem {
+    opacity: 0;
+    animation-name: show_en;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}

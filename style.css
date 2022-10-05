@@ -45,7 +45,7 @@ header {
 
 .main_title {
     width: 100%;
-    padding: 15rem 0;
+    padding: 15rem 0 30rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,4 +120,166 @@ header {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
+}
+
+.main_intro_container {
+    width: 100%;
+    height: 56rem;
+    margin-bottom: 10rem;
+}
+
+.section_title {
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.main_intro {
+    width: 100%;
+    height: 50rem;
+    display: flex;
+}
+
+.main_intro_pictures {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.main_intro_pictures img {
+    filter: grayscale(1);
+}
+
+.main_intro_pictures img:hover {
+    animation-name: moving_front;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.main_intro_picture1 {
+    width: 22rem;
+    height: 25rem;
+    position: absolute;
+    top: 5rem;
+    left: 6rem;
+    z-index: 5;
+}
+
+.main_intro_picture2 {
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    bottom: 10rem;
+    left: 18rem;
+    z-index: 15;
+}
+
+.main_intro_picture3 {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    top: 8rem;
+    right: 12rem;
+    z-index: 10;
+}
+
+@keyframes moving_front {
+    from {
+        padding: 0;
+        border: none;
+        filter: grayscale(1);
+    }
+
+    to {
+        padding: 1rem;
+        border: 2px solid black;
+        filter: grayscale(0);
+        transform: scale(1.2);
+        z-index: 20;
+    }
+}
+
+.main_intro_writings {
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_intro_writings h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.main_intro_writings h3 {
+    font-size: 2rem;
+}
+
+.main_discography_container {
+    width: 100%;
+    height: 36rem;
+}
+
+.main_discography {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_discography_flip {
+    width: 15rem;
+    height: 15rem;
+    perspective: 100rem;
+    position: relative;
+}
+
+.main_discography_card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.main_discography_front, .main_discography_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.main_discography_cover {
+    width: 100%;
+    height: 100%;
+}
+
+.main_discography_front {
+    transform: rotateY(0deg);
+}
+
+.main_discography_back {
+    border: 2px solid black;
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    font-size: 1.5rem;
+}
+
+.main_discography_flip:hover .main_discography_front {
+    transform: rotateY(180deg);
+}
+
+.main_discography_flip:hover .main_discography_back {
+    transform: rotateY(0deg);
 }

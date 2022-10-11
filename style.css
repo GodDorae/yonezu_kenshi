@@ -322,18 +322,19 @@ header {
 }
 
 #tomato_gradation {
-    background: linear-gradient(45deg, rgba(255,99,71,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(45deg, rgba(220,20,60,1) 0%, rgba(255,99,71,1) 100%);
+}
+
+#green_gradation {
+    background: linear-gradient(45deg, rgba(0,100,0,1) 0%, rgba(143,188,143,1) 100%);
+}
+
+#blue_gradation {
+    background: linear-gradient(45deg, rgba(25,25,112,1) 0%, rgba(0,139,139,1) 100%);
 }
 
 #black > span {
     color: black;
-}
-
-#black > span:hover {
-    animation-name: hover_color_black;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
 }
 
 #black:hover::before {
@@ -343,19 +344,48 @@ header {
     animation-fill-mode: forwards;
 }
 
-#red > span {
-    color: tomato;
-}
-
-#red > span:hover {
-    animation-name: hover_color_red;
+#black > span:hover {
+    animation-name: hover_color_black;
     animation-timing-function: ease-in-out;
     animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 
+#red > span {
+    color: black;
+}
+
 #red:hover::before {
     animation-name: hover_bg_red;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#green > span {
+    color: black;
+}
+
+#green:hover::before {
+    animation-name: hover_bg_green;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#blue > span {
+    color: black;
+}
+
+#blue > span:hover {
+    animation-name: hover_color_black;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+#blue:hover::before {
+    animation-name: hover_bg_blue;
     animation-timing-function: ease-in-out;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -383,20 +413,33 @@ header {
 
 @keyframes hover_bg_red {
     from {
-        background-color: white;
+        background-color: none;
         width: 0;
     }
     to {
-        background-color: tomato;
+        background-color: peachpuff;
         width: 100%;
     }
 }
 
-@keyframes hover_color_red {
+@keyframes hover_bg_green {
     from {
-        color: tomato;
+        background-color: none;
+        width: 0;
     }
     to {
-        color: white;
+        background-color: peachpuff;
+        width: 100%;
+    }
+}
+
+@keyframes hover_bg_blue {
+    from {
+        background-color: none;
+        width: 0;
+    }
+    to {
+        background-color: slategray;
+        width: 100%;
     }
 }

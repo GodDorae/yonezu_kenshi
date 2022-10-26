@@ -127,3 +127,48 @@ window.addEventListener("keyup", (e) => {
     closeModal5();
   }
 });
+
+const editorList = document.querySelector(".main_pick_ul");
+const leftButtons = document.querySelectorAll(".left");
+const rightButtons = document.querySelectorAll(".right");
+const lists = document.querySelectorAll(".main_pick_li");
+
+const listWidth = editorList.clientWidth;
+let i = 1;
+let movingWidth = 0;
+// Previous
+for (let index = 0; index < leftButtons.length; index++) {
+  leftButtons[index].addEventListener("click", () => {
+    if (i === 1) {
+      movingWidth = -(listWidth * 4);
+      for (let indexOfList = 0; indexOfList < lists.length; indexOfList++) {
+        lists[indexOfList].style.transform = `translateX(${movingWidth}px)`;
+      }
+      i = 5;
+    } else {
+      movingWidth += listWidth
+      for (let indexOfList = 0; indexOfList < lists.length; indexOfList++) {
+        lists[indexOfList].style.transform = `translateX(${movingWidth}px)`;
+      }
+      i -= 1;
+    }
+  })
+}
+// Next
+for (let index = 0; index < rightButtons.length; index++) {
+  rightButtons[index].addEventListener("click", () => {
+    if (i === 5) {
+      movingWidth = 0;
+      for (let indexOfList = 0; indexOfList < lists.length; indexOfList++) {
+        lists[indexOfList].style.transform = `translateX(${movingWidth}px)`;
+      }
+      i = 1;
+    } else {
+      movingWidth -= listWidth
+      for (let indexOfList = 0; indexOfList < lists.length; indexOfList++) {
+        lists[indexOfList].style.transform = `translateX(${movingWidth}px)`;
+      }
+      i += 1;
+    }
+  })
+}

@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Roboto Condensed', sans-serif;
     padding: 1rem;
-    height: 5000px;
+    height: max-content;
 }
 
 header {
@@ -131,7 +131,7 @@ header {
 .section_title {
     font-size: 4rem;
     font-weight: 700;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
 .main_intro {
@@ -219,6 +219,7 @@ header {
 .main_discography_container {
     width: 100%;
     height: 36rem;
+    margin-bottom: 20rem;
 }
 
 .main_discography {
@@ -512,4 +513,53 @@ header {
     font-size: 1rem;
     width: 100%;
     height: 1.25rem;
+}
+
+.main_pick_container {
+    width: 100%;
+}
+
+.main_pick {
+    width: 100%;
+}
+
+.main_pick_ul {
+    width: 100%;
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.main_pick_li {
+    display: inline-block;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.main_pick_li_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20rem;
+}
+
+.left, .right {
+    font-size: 4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main_pick_each {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_pick_cover {
+    width: 40%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
 }

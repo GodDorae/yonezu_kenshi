@@ -1,3 +1,5 @@
+// Modal
+
 const modal1 = document.getElementById("modal1");
 const album1Button = document.getElementById("black");
 const album1CloseButton = document.getElementById("modal1_close");
@@ -127,6 +129,8 @@ window.addEventListener("keyup", (e) => {
     closeModal5();
   }
 });
+
+// Editor's pick horizontal move
 
 const editorList = document.querySelector(".main_pick_ul");
 const leftButtons = document.querySelectorAll(".left");

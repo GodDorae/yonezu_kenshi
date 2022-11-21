@@ -150,13 +150,13 @@ for (let index = 0; index < leftButtons.length; index++) {
       }
       i = 5;
     } else {
-      movingWidth += listWidth
+      movingWidth += listWidth;
       for (let indexOfList = 0; indexOfList < lists.length; indexOfList++) {
         lists[indexOfList].style.transform = `translateX(${movingWidth}px)`;
       }
       i -= 1;
     }
-  })
+  });
 }
 // Next
 for (let index = 0; index < rightButtons.length; index++) {
@@ -168,11 +168,29 @@ for (let index = 0; index < rightButtons.length; index++) {
       }
       i = 1;
     } else {
-      movingWidth -= listWidth
+      movingWidth -= listWidth;
       for (let indexOfList = 0; indexOfList < lists.length; indexOfList++) {
         lists[indexOfList].style.transform = `translateX(${movingWidth}px)`;
       }
       i += 1;
     }
-  })
+  });
 }
+
+// Header scroll movement
+const about = document.getElementById("about");
+const aboutTitle = document.getElementById("about_title");
+const discography = document.getElementById("discography");
+const discographyTitle = document.getElementById("discography_title");
+const editorPick = document.getElementById("editor_pick");
+const editorTitle = document.getElementById("editor_title");
+
+about.addEventListener("click", () => {
+  aboutTitle.scrollIntoView({ behavior: "smooth" });
+});
+discography.addEventListener("click", () => {
+  discographyTitle.scrollIntoView({ behavior: "smooth" });
+});
+editorPick.addEventListener("click", () => {
+  editorTitle.scrollIntoView({ behavior: "smooth" });
+});

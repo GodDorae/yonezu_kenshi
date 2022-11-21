@@ -1,566 +1,618 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
-    padding: 1rem;
-    height: max-content;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 1rem;
+  height: max-content;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(1rem);
-    z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1rem);
+  z-index: 100;
 }
 
 .header_container {
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_component {
+  cursor: pointer;
 }
 
 .header_component::after {
-    display: block;
-    content: "";
-    width: 0px;
-    height: 2px;
-    background-color: black;
-    transition: all .2s ease-in-out;
+  display: block;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: black;
+  transition: all 0.2s ease-in-out;
 }
 
 .header_component:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .main_title {
-    width: 100%;
-    padding: 15rem 0 30rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  width: 100%;
+  padding: 15rem 0 30rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .main_title_jpn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
-    align-items: center;
-    font-size: 6rem;
-    font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+  font-size: 6rem;
+  font-weight: 700;
 }
 
 .main_title_jpn_elem {
-    opacity: 0;
-    animation-name: show;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+  opacity: 0;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes show {
-    from {
-        opacity: 0;
-        filter: blur(1rem);
-    }
+  from {
+    opacity: 0;
+    filter: blur(1rem);
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .jpn_1 {
-    animation-delay: 0;
+  animation-delay: 0;
 }
 
 .jpn_2 {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .jpn_3 {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .jpn_4 {
-    animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 .main_title_en {
-    font-size: 4rem;
-    font-weight: 700;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 @keyframes show_en {
-    from {
-        opacity: 0;
-        filter: blur(1rem);
-        transform: translateX(-2rem);
-    }
+  from {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translateX(-2rem);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .main_title_en_elem {
-    opacity: 0;
-    animation-name: show_en;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+  opacity: 0;
+  animation-name: show_en;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
 .main_intro_container {
-    width: 100%;
-    height: 56rem;
-    margin-bottom: 10rem;
+  width: 100%;
+  height: 56rem;
+  margin-bottom: 10rem;
 }
 
 .section_title {
-    font-size: 4rem;
-    font-weight: 700;
-    padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .main_intro {
-    width: 100%;
-    height: 50rem;
-    display: flex;
+  width: 100%;
+  height: 50rem;
+  display: flex;
 }
 
 .main_intro_pictures {
-    width: 50%;
-    height: 100%;
-    position: relative;
+  width: 50%;
+  height: 100%;
+  position: relative;
 }
 
 .main_intro_pictures img {
-    filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .main_intro_pictures img:hover {
-    animation-name: moving_front;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+  animation-name: moving_front;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .main_intro_picture1 {
-    width: 22rem;
-    height: 25rem;
-    position: absolute;
-    top: 5rem;
-    left: 6rem;
-    z-index: 5;
+  width: 22rem;
+  height: 25rem;
+  position: absolute;
+  top: 5rem;
+  left: 6rem;
+  z-index: 5;
 }
 
 .main_intro_picture2 {
-    width: 18rem;
-    height: 18rem;
-    position: absolute;
-    bottom: 10rem;
-    left: 18rem;
-    z-index: 15;
+  width: 18rem;
+  height: 18rem;
+  position: absolute;
+  bottom: 10rem;
+  left: 18rem;
+  z-index: 15;
 }
 
 .main_intro_picture3 {
-    width: 20rem;
-    height: 20rem;
-    position: absolute;
-    top: 8rem;
-    right: 12rem;
-    z-index: 10;
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  top: 8rem;
+  right: 12rem;
+  z-index: 10;
 }
 
 @keyframes moving_front {
-    from {
-        padding: 0;
-        border: none;
-        filter: grayscale(1);
-    }
+  from {
+    padding: 0;
+    border: none;
+    filter: grayscale(1);
+  }
 
-    to {
-        padding: 1rem;
-        border: 2px solid black;
-        filter: grayscale(0);
-        transform: scale(1.2);
-        z-index: 20;
-    }
+  to {
+    padding: 1rem;
+    border: 2px solid black;
+    filter: grayscale(0);
+    transform: scale(1.2);
+    z-index: 20;
+  }
 }
 
 .main_intro_writings {
-    line-height: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main_intro_writings h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 
 .main_intro_writings h3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .main_discography_container {
-    width: 100%;
-    height: 36rem;
-    margin-bottom: 20rem;
+  width: 100%;
+  height: 36rem;
+  margin-bottom: 20rem;
 }
 
 .main_discography {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main_discography_flip {
-    width: 15rem;
-    height: 15rem;
-    perspective: 100rem;
-    position: relative;
+  width: 15rem;
+  height: 15rem;
+  perspective: 100rem;
+  position: relative;
 }
 
 .main_discography_card {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
-.main_discography_front, .main_discography_back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: all 1s ease-in-out;
-    transform-style: preserve-3d;
+.main_discography_front,
+.main_discography_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
 }
 
 .main_discography_cover {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .main_discography_front {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .main_discography_back {
-    border: 2px solid black;
-    border-radius: 1rem;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 2;
-    font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+  font-size: 1.5rem;
 }
 
 .main_discography_flip:hover .main_discography_front {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .main_discography_flip:hover .main_discography_back {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .main_discography_tracklist {
-    position: relative;
-    display: block;
-    width: 6rem;
-    height: 3rem;
-    font-size: 1rem;
-    border: 1px solid black;
-    border-radius: 1rem;
-    cursor: pointer;
-    background-color: transparent;
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .main_discography_tracklist > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
 }
 
 .main_discography_tracklist::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-radius: 1rem;
-    background-color: none;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: none;
+  z-index: -1;
 }
 
 #gray_gradation {
-    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 #tomato_gradation {
-    background: linear-gradient(45deg, rgba(220,20,60,1) 0%, rgba(255,99,71,1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(220, 20, 60, 1) 0%,
+    rgba(255, 99, 71, 1) 100%
+  );
 }
 
 #green_gradation {
-    background: linear-gradient(45deg, rgba(0,100,0,1) 0%, rgba(143,188,143,1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 100, 0, 1) 0%,
+    rgba(143, 188, 143, 1) 100%
+  );
 }
 
 #blue_gradation {
-    background: linear-gradient(45deg, rgba(25,25,112,1) 0%, rgba(0,139,139,1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(25, 25, 112, 1) 0%,
+    rgba(0, 139, 139, 1) 100%
+  );
 }
 
-#black > span, #black2 > span {
-    color: black;
+#black > span,
+#black2 > span {
+  color: black;
 }
 
-#black:hover::before, #black2:hover::before {
-    animation-name: hover_bg_black;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+#black:hover::before,
+#black2:hover::before {
+  animation-name: hover_bg_black;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-#black > span:hover, #black2 > span:hover {
-    animation-name: hover_color_black;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+#black > span:hover,
+#black2 > span:hover {
+  animation-name: hover_color_black;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 #red > span {
-    color: black;
+  color: black;
 }
 
 #red:hover::before {
-    animation-name: hover_bg_red;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+  animation-name: hover_bg_red;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 #green > span {
-    color: black;
+  color: black;
 }
 
 #green:hover::before {
-    animation-name: hover_bg_green;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+  animation-name: hover_bg_green;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 #blue > span {
-    color: black;
+  color: black;
 }
 
 #blue > span:hover {
-    animation-name: hover_color_black;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+  animation-name: hover_color_black;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 #blue:hover::before {
-    animation-name: hover_bg_blue;
-    animation-timing-function: ease-in-out;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+  animation-name: hover_bg_blue;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes hover_bg_black {
-    from {
-        background-color: none;
-        width: 0;
-    }
-    to {
-        background-color: black;
-        width: 100%;
-    }
+  from {
+    background-color: none;
+    width: 0;
+  }
+  to {
+    background-color: black;
+    width: 100%;
+  }
 }
 
 @keyframes hover_color_black {
-    from {
-        color: black;
-    }
-    to {
-        color: white;
-    }
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
 }
 
 @keyframes hover_bg_red {
-    from {
-        background-color: none;
-        width: 0;
-    }
-    to {
-        background-color: peachpuff;
-        width: 100%;
-    }
+  from {
+    background-color: none;
+    width: 0;
+  }
+  to {
+    background-color: peachpuff;
+    width: 100%;
+  }
 }
 
 @keyframes hover_bg_green {
-    from {
-        background-color: none;
-        width: 0;
-    }
-    to {
-        background-color: peachpuff;
-        width: 100%;
-    }
+  from {
+    background-color: none;
+    width: 0;
+  }
+  to {
+    background-color: peachpuff;
+    width: 100%;
+  }
 }
 
 @keyframes hover_bg_blue {
-    from {
-        background-color: none;
-        width: 0;
-    }
-    to {
-        background-color: slategray;
-        width: 100%;
-    }
+  from {
+    background-color: none;
+    width: 0;
+  }
+  to {
+    background-color: slategray;
+    width: 100%;
+  }
 }
 
 .modal_overlay {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(1rem);
-    z-index: 200;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(1rem);
+  z-index: 200;
 }
 
 .modal_album {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20rem;
-    height: 57.5rem;
-    padding: 1rem;
-    background-color: white;
-    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.25);
-    border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 57.5rem;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
 }
 
 .modal_album_tracklist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
 }
 
 .modal_album_title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal_album_tracklist > img {
-    width: 100%;
+  width: 100%;
 }
 
 .modal_album_tracklist > button {
-    margin-top: 1rem;
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-    border: 1px solid black;
+  margin-top: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
 }
 
 .modal_album_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .modal_album_row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-    width: 100%;
-    height: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  width: 100%;
+  height: 1.25rem;
 }
 
 .main_pick_container {
-    width: 100%;
+  width: 100%;
 }
 
 .main_pick {
-    width: 100%;
+  width: 100%;
 }
 
 .main_pick_ul {
-    width: 100%;
-    list-style: none;
-    white-space: nowrap;
-    overflow-x: hidden;
+  width: 100%;
+  list-style: none;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .main_pick_li {
-    display: inline-block;
-    width: 100%;
-    transition: all .5s ease-in-out;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
 }
 
 .main_pick_li_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rem;
 }
 
-.left, .right {
-    font-size: 4rem;
-    font-weight: 700;
-    cursor: pointer;
+.left,
+.right {
+  font-size: 4rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .main_pick_each {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .main_pick_cover {
-    width: 40%;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 1rem;
+  width: 40%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_icon_container {
+  display: flex;
+  width: 20rem;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer_info {
+  text-align: center;
 }
